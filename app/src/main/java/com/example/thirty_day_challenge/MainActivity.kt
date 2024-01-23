@@ -3,7 +3,9 @@ package com.example.thirty_day_challenge
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -37,10 +39,23 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
     )
 }
 
+@Composable
+fun WellnessCard(dayVal: String, title: String, contentVal: String, modifier: Modifier = Modifier) {
+    Card {
+        Row {
+            Text(
+                text = dayVal,
+                modifier = modifier
+            )
+        }
+
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     ThirtyDayChallengeTheme {
-        Greeting("Android")
+        WellnessCard("1", "Spend 15 minutes outdoor", "test etetetasjkdfba ajksbd kjab kajbs kjb")
     }
 }
